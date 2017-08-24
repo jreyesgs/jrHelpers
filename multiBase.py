@@ -1,6 +1,14 @@
 #!/usr/bin python
 # coding=utf-8
-codeBase = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_"
+# base64 para URLS // codeBase = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_"
+
+# base69 codeBase = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_:/$?."
+# base70 codeBase = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_:/$?. "
+
+# Se puede codificar un mensaje si se crea una base aleatorio con los mismos caracteres aunque no he tenido en cuenta tildes ni caracteres especiales
+
+codeBase = "u.rEH2gDxk$Ki?mcCzb9lp _:OwhdMyWP/Yeos8SJfaA6GX1-LvNBI5qF7Q4n30tTjRZUV"
+
 #base16 = "0123456789ABCDEF"
 #base5 = "01234"
 
@@ -29,3 +37,6 @@ if __name__ == '__main__':
     v = encode(valor,b)
     print v
     print decode(v,b)
+    val = encode(decode('Hola me llamo Jose Reyes',70), 64)
+    print val
+    print encode(decode(val, 64),70)
